@@ -12,7 +12,7 @@ namespace WeatherAspNet.Models.ViewComponents
         public CityTemperatureViewComponent(IWeatherService weatherService)
         {
             _weatherService = weatherService;
-            cityName = "Sofia";
+            cityName = "Veliko Tarnovo";
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
