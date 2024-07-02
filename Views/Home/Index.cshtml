@@ -4,8 +4,8 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Hris</p>
-</div>
-<a class="btn btn-success" asp-controller="Weather" asp-action="Forcast">Weather</a>
+    
+    <a class="btn btn-success" asp-controller="Weather" asp-action="Forcast">Weather</a>
 
-@(await Component.InvokeAsync("CityTemperature"))
+    @(await Component.InvokeAsync("CityTemperature"))
+</div>

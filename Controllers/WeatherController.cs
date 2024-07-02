@@ -11,9 +11,9 @@ namespace WeatherAspNet.Controllers
         {
             _weatherService = weatherService;
         }
-        public IActionResult Forcast(City city)
+        public IActionResult Forcast()
         {
-            _weatherService.GetCity(city.Name);
+            //_weatherService.GetCity();
             
             return View();
 
