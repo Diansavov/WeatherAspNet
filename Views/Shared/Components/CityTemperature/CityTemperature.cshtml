@@ -1,0 +1,4 @@
+@model WeatherAspNet.Models.ViewModels.CityTemperature
+
+<p>@string.Format("{0:0}°C", Model.CityTemp) <img src="@Model.IconUrl" alt="@Model.IconUrl" /> @Model.CityName</p>
+

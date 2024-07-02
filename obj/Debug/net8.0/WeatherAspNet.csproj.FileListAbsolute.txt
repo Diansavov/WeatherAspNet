@@ -28,3 +28,7 @@ C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\obj\Debug\net8.0\refint\Weathe
 C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\obj\Debug\net8.0\WeatherAspNet.pdb
 C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\obj\Debug\net8.0\WeatherAspNet.genruntimeconfig.cache
 C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\obj\Debug\net8.0\ref\WeatherAspNet.dll
+C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\obj\Debug\net8.0\WeatherAspNet.sourcelink.json
+C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\obj\Debug\net8.0\WeatherAspNet.csproj.AssemblyReference.cache
+C:\Users\NeteaUser\Desktop\Projects\WeatherAspNet\obj\Debug\net8.0\WeatherA.5D84122E.Up2Date
