@@ -1,3 +1,4 @@
+using WeatherAspNet.Models.ViewComponents;
 using WeatherAspNet.Services;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeatherAspNet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9ab4484a9972b64eb6f50418d625ca49a67c6a6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+135c6b18598644731336c1e22ad14ac15bf7646b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeatherAspNet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeatherAspNet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

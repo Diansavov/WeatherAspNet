@@ -6,7 +6,7 @@ namespace WeatherAspNet.Models.ViewModels
         public CityTemperature(WeatherData weatherData)
         {
             CityName = weatherData.Name;
-            CityTemp = weatherData.Main.Temp - 273.15;
+            CityTemp = weatherData.Main.TempCelsius;
             IconUrl = "https://openweathermap.org/img/wn/" + weatherData.Weather[0].Icon + ".png";
         }
          public string CityName { get; set; }

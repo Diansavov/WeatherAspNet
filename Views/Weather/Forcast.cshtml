@@ -1,3 +1,5 @@
+@model string
+
 @{
     ViewData["Title"] = "Forcast";
 }
@@ -5,4 +7,9 @@
 <form asp-action="Forcast">
     <label>CityName</label>
     <input type="text">
+
+    <button type="submit" class="btn btn-success">Search</button>
 </form>
+
+@(await Component.InvokeAsync("CityTemperature"))
+
