@@ -12,4 +12,5 @@
 </form>
 
 @(await Component.InvokeAsync("CityTemperature", new {newCityName = ViewData["NewCityName"]?.ToString()}))
-@ViewData["NewCityName"]
+
+@ViewData["CityNotFound"]

@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using WeatherAspNet.Models;
 
@@ -20,6 +21,8 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
+        Response.Cookies.Delete("LastCity");
+
         return View();
     }
 

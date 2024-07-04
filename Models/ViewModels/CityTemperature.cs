@@ -1,6 +1,6 @@
 namespace WeatherAspNet.Models.ViewModels
 {
-    class CityTemperature
+    public class CityTemperature
     {
 
         public CityTemperature(WeatherData weatherData)
