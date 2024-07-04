@@ -17,27 +17,7 @@ namespace WeatherAspNet.Models.ViewComponents
             weatherData = new WeatherData();
         }
         public async Task<IViewComponentResult> InvokeAsync(string newCityName)
-        {/*
-            WeatherData weatherData = new WeatherData();
-            if (newCityName != null)
-            {
-                weatherData = await _weatherService.GetCity(newCityName);
-                if (weatherData == null)
-                {
-                    ViewData["CityNotFound"] = "The City was not found or doesn't exist";
-                    
-                    //return await Task.FromResult((IViewComponentResult)View("CityTemperature", city));
-                }
-            }
-            else
-            {
-                weatherData = await _weatherService.GetCity("Sofia");
-            }
-
-            CityTemperature city = new CityTemperature(weatherData);
-
-            return await Task.FromResult((IViewComponentResult)View("CityTemperature", city));
-            */
+        {
             string? cityName = Request.Cookies["LastCity"];
             if (cityName == null)
             {
@@ -50,7 +30,7 @@ namespace WeatherAspNet.Models.ViewComponents
                 HttpContext.Response.Cookies.Append("LastCity", "Sofia", cookieOptions);
                 cityName = "Sofia";
             }
-            
+
             weatherData = await _weatherService.GetCity(newCityName);
             if (weatherData == null)
             {
