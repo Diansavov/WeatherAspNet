@@ -8,28 +8,23 @@ namespace WeatherAspNet.Models.ViewComponents
     public class CityTemperatureViewComponent : ViewComponent
     {
         private readonly IWeatherService _weatherService;
-        private string cityName;
-        public string CityName
-        {
-            get { return cityName; }
-            set
-            {
-                if (cityName == null)
-                {
-                    cityName = "Veliko Tarnovo";
-                }
-                cityName = value;
-            }
-        }
 
-        public CityTemperatureViewComponent(IWeatherService weatherService, string newCityName)
+
+        public CityTemperatureViewComponent(IWeatherService weatherService)
         {
             _weatherService = weatherService;
-            cityName = newCityName;
         }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public async Task<IViewComponentResult> InvokeAsync(string newCityName)
         {
-            WeatherData weatherData = await _weatherService.GetCity(cityName);
+            WeatherData weatherData = new WeatherData();
+            if (newCityName != null)
+            {
+                weatherData = await _weatherService.GetCity(newCityName);
+            }
+            else
+            {
+                weatherData = await _weatherService.GetCity("Sofia");
+            }
             CityTemperature city = new CityTemperature(weatherData);
 
             return await Task.FromResult((IViewComponentResult)View("CityTemperature", city));

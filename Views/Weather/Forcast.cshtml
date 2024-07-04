@@ -6,10 +6,10 @@
 
 <form asp-action="Forcast">
     <label>CityName</label>
-    <input type="text">
+    <input type="text" id="name" name="newCityName">
 
     <button type="submit" class="btn btn-success">Search</button>
 </form>
 
-@(await Component.InvokeAsync("CityTemperature"))
-
+@(await Component.InvokeAsync("CityTemperature", new {newCityName = ViewData["NewCityName"]?.ToString()}))
+@ViewData["NewCityName"]

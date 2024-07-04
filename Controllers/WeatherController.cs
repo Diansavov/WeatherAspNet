@@ -23,7 +23,8 @@ namespace WeatherAspNet.Controllers
         [HttpPost]
         public IActionResult Forcast(string newCityName)
         {
-            CityTemperatureViewComponent cityTempViewComp = new CityTemperatureViewComponent(_weatherService, newCityName);
+
+            ViewData["NewCityName"] = newCityName;
             return View();
 
         }
