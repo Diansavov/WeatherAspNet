@@ -1,3 +1,7 @@
+.city-temp-container{
+    width: 300px;
+    height: auto;
+}
 .temperature-container {
     display: block;
     width: 300px;
@@ -11,10 +15,20 @@
 .temperature-text {
     font-size: 36px;
 }
+
 .line-break{
     width: 200px;
     height: 3px !important;
     border: 1px solid orange;
     border-radius: 5px;
     color: rgba(255, 0, 0, 1);
+}
+
+.more-info p{
+font-weight: bold;
+margin-bottom: 5px;
+}
+.more-info-list{
+    border-left: 1px solid orange;
+    list-style-type: none;  
 }

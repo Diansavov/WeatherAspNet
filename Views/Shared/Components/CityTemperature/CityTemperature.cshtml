@@ -1,22 +1,36 @@
 @model WeatherAspNet.Models.ViewModels.CityTemperature
 
-<div>
-    <span>@DateTime.Now</span>
-    <h1>@Model.CityName, @Model.CountryCode</h1>
-</div>
-
-<div class="temperature-container">
-    <div class="temp-and-icon">
-        <img src="@Model.IconUrl" alt="@Model.IconUrl" />
-
-        <span class="temperature-text">
-
-            , @string.Format("{0:0}°C", Model.CityTemp)
-        </span>
-    </div>
-    <hr class="line-break" />
+<div class="city-temp-container">
     <div>
-        <p>Feels like: @string.Format("{0:0}°C", Model.CityTempFeelsLike), @Model.Weather.Main, @Model.Weather.Description</p>
-
+        <span>@DateTime.Now</span>
+        <h1>@Model.CityName, @Model.CountryCode</h1>
     </div>
+
+    <div class="temperature-container">
+        <div class="temp-and-icon">
+            <img src="@Model.IconUrl" alt="@Model.IconUrl" />
+
+            <span class="temperature-text">
+
+                , @string.Format("{0:0}°C", Model.CityTemp)
+            </span>
+        </div>
+        <hr class="line-break" />
+        <div class="more-info">
+            <p>Feels like: @string.Format("{0:0}°C", Model.CityTempFeelsLike), @Model.Weather.Description</p>
+
+            <ul class="more-info-list ">
+                <li>
+                    Wind speed: @Model.AirInfo.WindSpeed ms/N
+                </li>
+                <li>
+                    Humidity: @Model.AirInfo.Humidity%
+                </li>
+                <li>
+                    Visibility: @Model.AirInfo.Visibility km
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </div>
