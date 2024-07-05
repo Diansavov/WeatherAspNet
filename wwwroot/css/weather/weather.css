@@ -1,0 +1,20 @@
+.temperature-container {
+    display: block;
+    width: 300px;
+    height: 150px;
+}
+
+.temp-and-icon {
+    display: flex;
+}
+
+.temperature-text {
+    font-size: 36px;
+}
+.line-break{
+    width: 200px;
+    height: 3px !important;
+    border: 1px solid orange;
+    border-radius: 5px;
+    color: rgba(255, 0, 0, 1);
+}
