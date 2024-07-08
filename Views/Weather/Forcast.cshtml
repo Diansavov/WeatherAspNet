@@ -9,19 +9,23 @@
     <link rel="stylesheet" href="~/lib/node_modules/leaflet/dist/leaflet.css" asp-append-version="true" />
 }
 
-<form asp-action="Forcast">
-    <label>CityName</label>
-    <input type="text" id="name" name="newCityName">
+<div class="top-section">
+    <form asp-action="Forcast">
+        <div class="search">
+            <div class="search-bar">
+                <input placeholder="Enter city name" type="text" id="name" name="newCityName">
+            </div>
+            <button type="submit" class="search-btn">Search</button>
 
-    <button type="submit" class="btn btn-success">Search</button>
-</form>
+        </div>
+    </form>
+</div>
 
-<div class="d-flex">
+<div class="top-components">
     @(await Component.InvokeAsync("CityTemperature", new { newCityName = ViewData["NewCityName"]?.ToString() }))
 
     @(await Component.InvokeAsync("TemperatureMap"))
 </div>
-
 
 @section Scripts {
     <script src="~/lib/node_modules/leaflet/dist/leaflet.js" asp-append-version="true"></script>
