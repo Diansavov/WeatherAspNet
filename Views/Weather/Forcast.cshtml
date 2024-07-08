@@ -3,8 +3,10 @@
 @{
     ViewData["Title"] = "Forcast";
 }
-@section Styles{
+@section Styles {
     <link rel="stylesheet" href="~/css/weather/weather.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/weather/weatherMap.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/node_modules/leaflet/dist/leaflet.css" asp-append-version="true" />
 }
 
 <form asp-action="Forcast">
@@ -14,4 +16,14 @@
     <button type="submit" class="btn btn-success">Search</button>
 </form>
 
-@(await Component.InvokeAsync("CityTemperature", new {newCityName = ViewData["NewCityName"]?.ToString()}))
+<div class="d-flex">
+    @(await Component.InvokeAsync("CityTemperature", new { newCityName = ViewData["NewCityName"]?.ToString() }))
+
+    @(await Component.InvokeAsync("TemperatureMap"))
+</div>
+
+
+@section Scripts {
+    <script src="~/lib/node_modules/leaflet/dist/leaflet.js" asp-append-version="true"></script>
+    <script src="~/js/weatherMap/weatherMap.js" asp-append-version="true"></script>
+}
