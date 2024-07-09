@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WeatherAspNet.Models;
 using WeatherAspNet.Services;
 
 namespace WeatherAspNet.Controllers
@@ -21,6 +22,15 @@ namespace WeatherAspNet.Controllers
             ViewData["NewCityName"] = newCityName;
             return View();
 
+        }
+        public async Task<JsonResult> Coordinates()
+        {
+            string? cityName = Request.Cookies["LastCity"];
+
+            WeatherData city = await _weatherService.GetCity(cityName);
+            JsonResult jsonResult = Json(city.Coord);
+            
+            return jsonResult;
         }
     }
 }
